@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
+ruby '2.3.1'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -27,10 +27,9 @@ gem 'haml-rails'
 # A banch of useful helpers for HTML forms
 gem 'simple_form'
 
-# User authentication 
+# User authentication
 gem 'devise'
 
-gem 'unicorn'
 gem 'rack-timeout'
 
 gem 'delayed_job_active_record'
@@ -50,4 +49,14 @@ gem 'will_paginate-bootstrap'
 group :development, :test do
 
 end
+
+group :development do
+  gem 'capistrano',         require: false
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma',   require: false
+end
+
+gem 'puma'
 
