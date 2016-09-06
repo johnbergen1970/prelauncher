@@ -13,7 +13,7 @@ class Setting < ActiveRecord::Base
 	validates_attachment :twitter_image, :content_type => {:content_type => /\Aimage\/.*\Z/}
 
 	has_attached_file :pinterest_image
-	validates_attachment :pinterest_image, :content_type => {:content_type => /\Aimage\/.*\Z/}	
+	validates_attachment :pinterest_image, :content_type => {:content_type => /\Aimage\/.*\Z/}
 
 	has_attached_file :google_plus_image
 	validates_attachment :google_plus_image, :content_type => {:content_type => /\Aimage\/.*\Z/}
@@ -21,8 +21,8 @@ class Setting < ActiveRecord::Base
 	after_save :clear_cache
 
 
-	MAILCHIMP_API_KEY = nil
-	MAILCHIMP_LIST_ID = nil
+	MAILCHIMP_API_KEY = 'f42983d64a8f69488e39715466881ce3-us14'
+	MAILCHIMP_LIST_ID = '12587'
 
 	def self.cover_image
 		(Setting.first || Setting.new).cover_image
@@ -53,7 +53,7 @@ class Setting < ActiveRecord::Base
 		return {
 			twitter_message: setting.twitter_message || "",
 			facebook_message: setting.facebook_message || "",
-			email_message: setting.email_message || "", 
+			email_message: setting.email_message || "",
 			email_subject: setting.email_subject || "",
 			facebook_title: setting.facebook_title || "",
 			pinterest_description: setting.pinterest_description || "",
