@@ -20,12 +20,12 @@ class User < ActiveRecord::Base
         base = 0
 
         unless prize
-            return unit * (number_of_referrals.fdiv(targets[0])) 
+            return unit * (number_of_referrals.fdiv(targets[0]))
         end
 
-        targets.each_with_index do |value, index|  
+        targets.each_with_index do |value, index|
             if number_of_referrals >= value && value > 0
-                base += unit 
+                base += unit
             elsif index > 0
                 base += unit * (number_of_referrals - targets[index - 1]).fdiv(value - targets[index - 1])
                 break
@@ -84,7 +84,7 @@ class User < ActiveRecord::Base
     end
 
     def add_user_to_mailchimp
-        delay.mailchimp_subscribe if Setting::MAILCHIMP_API_KEY && Setting::MAILCHIMP_LIST_ID
+        delay.mailchimp_subscribe if Setting::MAILCHIMP_API_KEY.presence && Setting::MAILCHIMP_LIST_IDY.presence
     end
 
     def mailchimp_subscribe
