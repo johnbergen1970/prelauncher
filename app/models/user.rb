@@ -84,7 +84,7 @@ class User < ActiveRecord::Base
     end
 
     def add_user_to_mailchimp
-        delay.mailchimp_subscribe if Setting::MAILCHIMP_API_KEY.presence && Setting::MAILCHIMP_LIST_IDY.presence
+        delay.mailchimp_subscribe if Setting::MAILCHIMP_API_KEY.presence && Setting::MAILCHIMP_LIST_ID.presence
     end
 
     def mailchimp_subscribe
