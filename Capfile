@@ -21,6 +21,7 @@ require 'capistrano/puma'
 # require 'capistrano/chruby'
 require 'capistrano/bundler'
 require 'capistrano/rails'
+require 'capistrano/delayed_job'
 # require 'capistrano/passenger'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
