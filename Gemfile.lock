@@ -190,6 +190,9 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
+    sendgrid-rails (3.1.0)
+      actionmailer (>= 3.0.0)
+      activesupport (>= 2.1.0)
     sexp_processor (4.6.0)
     simple_form (3.1.0)
       actionpack (~> 4.0)
@@ -246,6 +249,7 @@ DEPENDENCIES
   rails (= 4.2.1)
   rails_12factor
   sass-rails (~> 5.0)
+  sendgrid-rails
   simple_form
   therubyracer
   turbolinks
