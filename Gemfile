@@ -21,7 +21,7 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 gem 'gibbon'
-gem 'sendgrid-rails'
+gem 'sendgrid-ruby'
 # Use HAML as the templating engine
 gem 'haml-rails'
 
@@ -49,7 +49,7 @@ gem 'will_paginate-bootstrap'
 
 gem 'daemons'
 group :development, :test do
-
+  gem 'pry'
 end
 
 group :development do

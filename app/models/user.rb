@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
     before_create :set_referral_code
     after_create :add_user_to_mailchimp
     after_create :welcome_email
+    after_create :referral_email
 
     def prize
     	Prize.where(number_of_referrals: 0..number_of_referrals).order("number_of_referrals asc").last
@@ -111,4 +112,7 @@ class User < ActiveRecord::Base
         UserMailer.delay.sign_up_email(self)
     end
 
+    def referral_email
+        UserMailer.delay.referral_email(User.find(referrer_id)) if referrer_id
+    end
 end
