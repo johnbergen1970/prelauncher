@@ -1,13 +1,26 @@
-%section#main{style: "background-image: url(#{asset_url(Setting.cover_image.url)});"}
-	.cover 
-		%h1.cover-title Start Training Together 
-		%h3.cover-subtitle Stop managing clients, start managing relationships. You deserve a better personal training software to connect with your clients. We’re here to make it
+-#%section#main{style: "background-image: url(#{asset_url(Setting.cover_image.url)});"}
+%section#main{style: "height:446px; background-image:url(http://earlyaccess.traintogether.co/system/settings/cover_images/000/000/001/original/train-together-personal-training-software.png?1473311664);"}
+  .cover{style: "text-align:left; padding-left:25px;"}
+    %h1.cover-title{style: "text-align:left;"} Start Training Together
+    %h3{style: "color:#373b44;"}
+      Stop managing clients, start managing relationships.
+      %br>/
+      You deserve a better personal training software to
+      %br>/
+      connect with your clients. We’re here to make it
 
-		#form-wrapper
-			= render "form"
-			%small Be the first to know, get early access 
-		%footer
-			%p
-				Powered by 
-				%a{href: "http://traintogether.co"} Train Together, LCC
+%section#section_bottom
+  .wrapper{style: "text-align:center"}
+    .reinforcement-statement
+      #reinforcement-image{style: "height:39px; width:64px; margin-left:auto; margin-right:auto; margin-top:15px; margin-bottom:15px; background-image: url(http://prelauncher.info/system/constructors/reinforcement_icons/561a/c786/56ea/425c/c900/02a5/original/key.png?1445688053)"}
+      %p.reinforcement-message{style: "font-weight:bold; text-align:center;"} ACCESS AWESOME DISCOUNTS INSIDE
+
+    #form-wrapper
+      = render "form"
+    %small{style: "font-size:16px; text-align:center;"} Be the first to know, get early access
+
+    %footer#footer{style: "margin-top:60px; margin-bottom:20px; text-align:center;"}
+      %p
+        Powered by
+        %a{href: "http://traintogether.co", style: "font-size:14px;font-weight:bold"} Train Together, LCC
 

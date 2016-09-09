@@ -2,8 +2,6 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  host:     localhost
-  timeout:  5000
 
 development:
   <<: *default
